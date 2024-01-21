@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>BMI & BMR Calculator and Storage</title>
+</head>
+<body>
+    <div class="calculator-container">
+        <br><br><br><br><br><br>
+        <h1 class="h">BMI & BMR Calculator and Storage</h1>
+        <label for="unitSystem">Unit System:</label>
+        <select id="unitSystem">
+            <option value="metric">Metric</option>
+            <option value="imperial">Imperial</option>
+        </select>
+
+        <label for="height">Height:</label>
+        <input type="number" id="height" placeholder="Enter height" required>
+        
+        <label for="weight">Weight:</label>
+        <input type="number" id="weight" placeholder="Enter weight" required>
+
+        <label for="age">Age:</label>
+        <input type="number" id="age" placeholder="Enter age" required>
+
+        <label for="gender">Gender:</label>
+        <select id="gender" required>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+
+        <button onclick="calculate()">Calculate</button>
+
+        <div class="results">
+            <h2>Results:</h2>
+            <p id="bmiResult">BMI: </p>
+            <p id="bmrResult">BMR: </p>
+            <button onclick="clearResults()">Clear Results</button>
+        </div>
+
+        <div class="history">
+            <h2>History:</h2>
+            <ul id="historyList"></ul>
+            <button onclick="clearHistory()">Clear History</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
